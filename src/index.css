@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home, .cards, .contact-info{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  padding-left: 15%;
+  padding-top: 4%;
+}
+
+.profile{
+  padding-top: 25%;
+}
+
+.about{
+  padding: 8%;
+}
+
+.card{
+  border: 1px solid white;
+  width: 150px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateX(-80px);
+}
+
+.card:hover .card-content {
+  opacity: 1;
+}
+
+.card-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bars{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  padding: 0% 5%;
+}
+
+.bar1, .bar4{
+  width: 95%;
+}
+
+.bar2, .bar5{
+  width: 90%;
+}
+
+.bar3{
+  width: 65%;
+}
+
+.bar6{
+  width: 75%;
+}
+
+.acc1{
+  display: none;
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 25px;
+  padding:1% 8%;
+}
+
+.profile, .profile-img, .slide-In {
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
